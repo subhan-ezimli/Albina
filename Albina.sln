@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albina", "Albina\Albina.csproj", "{B42B6F7A-A4D5-47FF-9CDE-CE3FFBDBB9D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{21688CC1-B91D-4A04-AD84-DDE4DE6CA830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B42B6F7A-A4D5-47FF-9CDE-CE3FFBDBB9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42B6F7A-A4D5-47FF-9CDE-CE3FFBDBB9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42B6F7A-A4D5-47FF-9CDE-CE3FFBDBB9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42B6F7A-A4D5-47FF-9CDE-CE3FFBDBB9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21688CC1-B91D-4A04-AD84-DDE4DE6CA830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21688CC1-B91D-4A04-AD84-DDE4DE6CA830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21688CC1-B91D-4A04-AD84-DDE4DE6CA830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21688CC1-B91D-4A04-AD84-DDE4DE6CA830}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C2F1DD8-6D11-476A-A556-24634B401C8A}
+	EndGlobalSection
+EndGlobal

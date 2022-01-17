@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SliderItemViewModel>
+<div id="carousel-home">  
+    <div class="owl-carousel owl-theme"> 
+       
+        @foreach (var item in Model)
+        {
+            string positionClass = "justify-content-md-end";
+            string textClass = "text-right";
+
+
+            if (item.Position==Repository.Enums.SliderPosition.Left)
+            {
+                positionClass= "justify-content-md-start";
+                textClass = "text-left";
+            }
+            if (item.Position== Repository.Enums.SliderPosition.Center)
+            {
+                positionClass = "justify-content-md-center";
+                textClass = "text-center";
+            }
+
+            <div class="owl-slide cover" style="background-image: url(uploads/@item.Image)">
+                <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                    <div class="container">
+                        <div class="row justify-content-center @positionClass ">
+                            <div class="col-lg-6 static">
+                                <div class="slide-text @textClass white">
+                                    <h2 class="owl-slide-animated owl-slide-title">@Html.Raw(@item.Title)</h2>
+                                    <p class="owl-slide-animated owl-slide-subtitle">
+                                        @item.Slogan  
+                                    </p>
+                                    @if (!string.IsNullOrEmpty(item.EndPoint))
+                                    {    
+                                        <div class="owl-slide-animated owl-slide-cta">
+                                            <a class="btn_1" href="@item.EndPoint" role="button"> @item.ActionTest</a>
+                                        </div> 
+                                    }  
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        }   
+    </div>
+    <div id="icon_drag_mobile"></div>
+</div>
+<!--/carousel-->

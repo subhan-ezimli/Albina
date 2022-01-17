@@ -1,0 +1,51 @@
+﻿@model ProductViewModel 
+<div class="grid_item">
+    <figure>
+        @if (Model.Discount != null)
+        {
+            <span class="ribbon off">@Model.Discount.Percentage%</span>
+        }
+
+        @if (Model.Discount==null && Model.Label!=null)
+        {
+            <span class="ribbon new" style="background-color:@Model.Label.Color;">@Model.Label.Text</span>
+        }
+
+    <a href="product-detail-1.html">
+        <img class="img-fluid lazy" src="img/products/product_placeholder_square_medium.jpg" data-src="uploads/@Model.Photos[0]" alt="@Model.Name">
+        @if (Model.Photos.Count > 1)
+        {
+            <img class="img-fluid lazy" src="img/products/product_placeholder_square_medium.jpg" data-src="uploads/@Model.Photos[1]" alt="@Model.Name">
+        }
+
+       </a>
+        @if (Model.Discount != null)
+        {
+            <div data-countdown="@Model.Discount.EndDate.ToString("yyyy/MM/dd")" class="countdown"></div>
+        }
+
+    </figure>
+    <div class="rating"><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star"></i></div>
+    <a href="product-detail-1.html">
+        <h3>@Model.Name</h3>
+    </a>
+    <div class="price_box">
+        @if (Model.Discount == null)
+        {
+            <span class="new_price">@Model.Price.ToString("#.00 ")₼</span>
+        }
+        else
+        {
+
+            var price = Model.Price -(Model.Price * (Model.Discount.Percentage / 100));
+            <span class="new_price">@Model.Price.ToString("#.00 ")₼</span>
+            <span class="old_price">@Model.Price.ToString("#.00 ")₼</span>
+        }
+    </div>
+    <ul>
+        <li><a href="#0" class="tooltip-1" data-toggle="tooltip" data-placement="left" title="Add to favorites"><i class="ti-heart"></i><span>Add to favorites</span></a></li>
+        <li><a href="#0" class="tooltip-1" data-toggle="tooltip" data-placement="left" title="Add to compare"><i class="ti-control-shuffle"></i><span>Add to compare</span></a></li>
+        <li><a href="#0" class="tooltip-1" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="ti-shopping-cart"></i><span>Add to cart</span></a></li>
+    </ul>
+</div>
+<!-- /grid_item -->

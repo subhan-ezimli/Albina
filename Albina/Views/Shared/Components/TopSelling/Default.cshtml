@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ProductViewModel>
+    <div class="container margin_60_35">
+        <div class="main_title">
+            <h2>Top Selling</h2>
+            <span>Products</span>
+            <p>Cum doctus civibus efficiantur in imperdiet deterruisset</p>
+        </div>
+        <div class="row small-gutters">
+            @foreach (var item in Model)
+            {
+                <div class="col-6 col-md-4 col-xl-3">
+                    <partial name="Product/_SingleProduct" model=" item" />
+                </div>
+            }            
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->

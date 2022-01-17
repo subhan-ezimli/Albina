@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ShopCollectionViewModel>
+<ul id="banners_grid" class="clearfix">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@item.EndPoint" class="img_container">
+                <img src="Uploads/@item.Image" data-src="Uploads/@item.Image" alt="" class="lazy">
+                <div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                    <h3> @item.Name</h3>
+                    <div><span class="btn_1"> Ətraflı</span></div>
+                </div>
+            </a>
+        </li>
+    }
+
+
+</ul>
+<!--/banners_grid -->
